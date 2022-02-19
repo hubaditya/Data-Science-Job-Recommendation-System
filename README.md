@@ -53,7 +53,7 @@ An additional dataset is used to incorporate cost of living for US cities while 
 * Recommendation
   * TODO: Missing validating dataset to check how good the recommendation is
 * Salary
-  * Mean absolute error of $9k salary on cross-validation 
+  * Mean absolute error of $11k salary before hyperparameter tuning and $9k salary after on cross-validation 
 
 #### Result
 An array of json objects containing company, job title, location and salary 
