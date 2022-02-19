@@ -22,8 +22,8 @@ This data is scraped from the Glassdoor website using Selenium scrapper. After s
 
 #### Feature Engineering
 * Recommendation
- * binning job titles into data engineer, ml engineer, data scientist and data analyst
- * creating a DB for skills from stackoverflow and looking for those keywords in job description using unigram and bigram tokenization to list all the skills for that job
- * extracting years of experience from job description using regex and job title
- * binning industries from sectors
+  * binning job titles into data engineer, ml engineer, data scientist and data analyst
+  * creating a DB for skills from stackoverflow and looking for those keywords in job description using unigram and bigram tokenization to list all the skills for that job
+  * extracting years of experience from job description using regex and job title
+  * binning industries from sectors
  
