@@ -13,5 +13,12 @@ This datas is scraped from the Glassdoor website using Selenium scrapper. After 
  ### Technical Details
  
  #### Libraries
- * sklearn - for model c
+ * pandas & numpy - for data wrangling and mathematical operations
+ * nltk - for information retrieval from job descriptions
+ * sklearn - for feature engineering, model building and model evaluation
+ * requests & json - for using stackoverflow api as the database for the skillsets required
+ * pyresparser & pypdf2 - for extracting relevant information from resume 
+ * bayes_opt - for hyperparameter tuning using Bayesian Optimization
+
+#### Feature Engineering
  
