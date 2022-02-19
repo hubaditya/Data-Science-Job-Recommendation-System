@@ -8,7 +8,7 @@ The motivation to do this project was to help a student understand what should b
 Given a resume, recommend jobs from a given dataset of various companies comprising of the job descriptions and their profile and predict salary for the student
  
  ### Dataset
-This data is scraped from the Glassdoor website using Selenium scrapper. After scraping, the raw dataset was cleaned and made usable for performing data analysis and modelling. The dataset contains information about the minimum salary, maximum salary, average salary, job description, age of the company in years, etc.
+This data is scraped from the Glassdoor website using Selenium scrapper. After scraping, the raw dataset was cleaned and made usable for performing data analysis and modelling. The dataset contains information about the minimum salary, maximum salary, average salary, job description, age of the company in years, etc.<br>
 An additional dataset is used to incorporate cost of living for US cities while predicting salary.
  
  ### Technical Details
