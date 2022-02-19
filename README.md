@@ -9,6 +9,7 @@ Given a resume, recommend jobs from a given dataset of various companies compris
  
  ### Dataset
 This data is scraped from the Glassdoor website using Selenium scrapper. After scraping, the raw dataset was cleaned and made usable for performing data analysis and modelling. The dataset contains information about the minimum salary, maximum salary, average salary, job description, age of the company in years, etc.
+An additional dataset is used to incorporate cost of living for US cities while predicting salary.
  
  ### Technical Details
  
@@ -26,4 +27,34 @@ This data is scraped from the Glassdoor website using Selenium scrapper. After s
   * creating a DB for skills from stackoverflow and looking for those keywords in job description using unigram and bigram tokenization to list all the skills for that job
   * extracting years of experience from job description using regex and job title
   * binning industries from sectors
+  * dummy encoding degree, previous job titles, industries worked and skillset
+* Salary
+  * binning company size
+  * taking median salary as the response variable since salary tends to be right skewed
+  * imputing mean state cost of living for cities missing
+  * using Non-Matrix Factorization for dimensionality reduction of skills
+* Resume
+  * mapping degree, previous job titles, experience, industries worked and skillset using unigram and bigram tokenization from resume parsing
+  * dummy encoding them to match the features with features of the original data
+
+#### Modeling
+* Recommendation
+  * filtering the jobs from original data on the experience calculated from resume
+  * defining a cosine similarity function and mapping degree, previous job titles, industries worked and skillset individually using the function
+  * scaling the similarity for standardization to prevent undue advantage of any feature
+  * multiplying the scaled features with a weightage matrix of degree, previous job titles, industries worked and fetching top 3 highest values for unique companies
+* Salary
+  * using bayesian optimization for hyperparameter tuning of while training XGBoost
+  * getting the company features and location (cost of living) from the recommendations and manipulating them to match the training data
+  * transforming skills based on fitted Non-Matrix Factorization
+  * predicting salary for each of the 3 recommendations
+
+#### Evaluation
+* Recommendation
+  * Missing validating dataset to check how good the recommendation is
+* Salary
+  * Mean absolute error of $9k salary on cross-validation 
+
+#### Result
+An array of json objects containing company, job title, location and salary 
  
