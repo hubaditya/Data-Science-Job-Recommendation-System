@@ -44,7 +44,7 @@ An additional dataset is used to incorporate cost of living for US cities while 
   * scaling the similarity for standardization to prevent undue advantage of any feature
   * multiplying the scaled features with a weightage matrix of degree, previous job titles, industries worked and fetching top 3 highest values for unique companies
 * Salary
-  * using bayesian optimization for hyperparameter tuning of while training XGBoost
+  * using bayesian optimization for hyperparameter tuning while training XGBoost
   * getting the company features and location (cost of living) from the recommendations and manipulating them to match the training data
   * transforming skills based on fitted Non-Matrix Factorization
   * predicting salary for each of the 3 recommendations
