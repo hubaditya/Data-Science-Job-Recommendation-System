@@ -8,17 +8,22 @@ The motivation to do this project was to help a student understand what should b
 Given a resume, recommend jobs from a given dataset of various companies comprising of the job descriptions and their profile and predict salary for the student
  
  ### Dataset
-This datas is scraped from the Glassdoor website using Selenium scrapper. After scraping, the raw dataset was cleaned and made usable for performing data analysis and modelling. The dataset contains information about the minimum salary, maximum salary, average salary, job description, age of the company in years, etc.
+This data is scraped from the Glassdoor website using Selenium scrapper. After scraping, the raw dataset was cleaned and made usable for performing data analysis and modelling. The dataset contains information about the minimum salary, maximum salary, average salary, job description, age of the company in years, etc.
  
  ### Technical Details
  
  #### Libraries
  * pandas & numpy - for data wrangling and mathematical operations
- * nltk - for information retrieval from job descriptions
+ * nltk and re - for information retrieval from job descriptions
  * sklearn - for feature engineering, model building and model evaluation
  * requests & json - for using stackoverflow api as the database for the skillsets required
  * pyresparser & pypdf2 - for extracting relevant information from resume 
  * bayes_opt - for hyperparameter tuning using Bayesian Optimization
 
 #### Feature Engineering
+* Recommendation
+ * binning job titles into data engineer, ml engineer, data scientist and data analyst
+ * creating a DB for skills from stackoverflow and looking for those keywords in job description using unigram and bigram tokenization to list all the skills for that job
+ * extracting years of experience from job description using regex and job title
+ * binning industries from sectors
  
