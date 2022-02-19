@@ -10,6 +10,34 @@ Given a resume, recommend jobs from a given dataset of various companies compris
  ### Dataset
 This data is scraped from the Glassdoor website using Selenium scrapper. After scraping, the raw dataset was cleaned and made usable for performing data analysis and modelling. The dataset contains information about the minimum salary, maximum salary, average salary, job description, age of the company in years, etc.<br>
 An additional dataset is used to incorporate cost of living for US cities while predicting salary.
+
+| Column            | Description         | Data Type |
+|:---               |:---                 |:----------|
+| index     | row number        | Integer   |
+| Job Title      | Job title required by the company    | String   |
+| Salary Estimate     | Salary estimated by Glassdoor    | String   | 
+| Job Description     | Job description posted by the company    | String   |
+| Rating     | Company rating on Glassdoor    | Float   | 
+| Company Name     | Company name    | String   |
+| Location     | Job location    | String   |
+| Headquarters     | Company headquarters    | String   |
+| Size     | Company size    | String   |
+| Founded     | Year in which the company was founded    | Integer   |
+| Type of ownership     | Company ownership type    | String   |
+| Salary Estimate     | Salary estimated by Glassdoor    | String   | 
+| Industry     | Industry which the company belongs to    | String   | 
+| Sector     | Sub-category of industry    | String   |
+| Revenue     | Company revenue    | String   |
+| Competitors     | Competitors of the company    | String  |
+| Hourly     | If the employees are paid hourly or not    | Integer  | 
+| Employer Provided     | If the salary was provided by the employer or employee    | Integer   |
+| Lower Salary     | The lower range of the salary estimated by Glassdoor    | Integer   | 
+| Upper Salary     | The upper range of the salary estimated by Glassdoor    | Integer   | 
+| Avg Salary(K)     | The average salary of the salary estimated by Glassdoor    | Float   | 
+| company_txt     | Company name simplified    | String   |
+| Job Location     | Job location simplified    | String   |
+| Age     | Company age    | Integer   |
+| Degree     | Minimum candidate educational degree required by the job  | String   |
  
  ### Technical Details
  
