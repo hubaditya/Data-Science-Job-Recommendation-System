@@ -51,7 +51,7 @@ An additional dataset is used to incorporate cost of living for US cities while 
 
 #### Evaluation
 * Recommendation
-  * Missing validating dataset to check how good the recommendation is
+  * TODO: Missing validating dataset to check how good the recommendation is
 * Salary
   * Mean absolute error of $9k salary on cross-validation 
 
